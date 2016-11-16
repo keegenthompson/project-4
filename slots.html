@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>machine</title>
+</head>
+
+<style>
+    h4{
+        text-transform: uppercase;
+    }
+   header {
+        background-color: #ffffff;
+        width: 40%;
+        border: double 25px #000000;
+        padding: 25px;
+        margin-left: 25%;
+        margin-top: 0%;
+    }
+div {
+    background-color: #ffffff;
+    width: 40%;
+    border: double 25px #000000;
+    padding: 25px;
+    margin-left: 25%;
+    margin-top: 0%;
+}
+    h3 {
+        font-size: 350%;
+    }
+    .align {
+
+    }
+textarea {
+    font-size: 350%;
+}
+
+    .button {
+        background-color: #000000;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin-left: 43%;
+        cursor: pointer;
+    }
+</style>
+
+<script>
+
+
+
+    function myFunction() {
+        var x = Math.floor((Math.random() * 9));
+        document.getElementById("choice1").innerHTML = x;
+
+        var y = Math.floor((Math.random() * 9));
+        document.getElementById("choice2").innerHTML = y;
+
+        var z = Math.floor((Math.random() * 9));
+        document.getElementById("choice3").innerHTML = z;
+
+        if ((x == y) && (x == z)) total = total + 100;
+        else if ((x == y) || (y == z)) total = total + 10;
+    }
+    var total = 50; 
+    document.getElementById('sub10').onclick = sub10;
+    document.getElementById('sub1').onclick = sub1;
+
+    function sub1() {
+        total = total - 1;
+        document.getElementById('result').innerHTML = total;
+    }
+
+    function sub10() {
+        total = total - 10;
+        document.getElementById('result').innerHTML = total;
+    }
+
+</script>
+
+<body background="Sdw1RGJ.jpg">
+<header>
+
+    <center><h3>Feeling lucky?</h3></center>
+
+    <center><h4>Spin to try your luck!</h4></center>
+<center>
+<table>
+    <tr><textarea id="choice1" rows=1 cols=1 name="Green,Blue,yellow,Red,Orange" readonly>
+    </textarea>
+    </tr>
+    <tr>
+        <textarea id="choice2" rows=1 cols=1 name="Green,Blue,yellow,Red,Orange" readonly>
+    </textarea>
+    </tr>
+    <tr>
+        <textarea id="choice3" rows=1 cols=1 name="Green,Blue,yellow,Red,Orange" readonly>
+    </textarea>
+    </tr>
+    </table>
+</center>
+    <lable align=right > Gold: </lable>
+    <h2 id="result" min="0">60</h2>
+
+    <button class="button"  id="sub10"  min="0"  onclick="myFunction();sub10()" >SPIN!!!</button>
+    <input type="button" value="Start over" onClick="window.location.reload()">
+
+
+</header>
+
+<div>
+<h4>How to win:</h4>
+<p>
+    To win in this slot you first need to make sure to always have enough credits to play.
+    </p>
+  <p>
+
+    The cost for each spin is 10 credits.
+</p>
+    <p>
+        Point system: If any number is same numbers are side by side that is 10 points.
+    </p>
+    <p>
+        If all three numbers are the same that is a jackpot worth 100 credits.
+    </p>
+    <p>
+        Special numbers for mini jackpots are 2-1-1 / 7-1-1
+    </p>
+</div>
+
+
+</body>
+</html>
